@@ -1,0 +1,10 @@
+{
+  "name": "generate-quiz",
+  "version": "1.0.0",
+  "description": "Edge Function for generating quizzes from documents",
+  "main": "index.ts",
+  "dependencies": {
+    "pdf-parse": "^1.1.1",
+    "mammoth": "^1.6.0"
+  }
+} 

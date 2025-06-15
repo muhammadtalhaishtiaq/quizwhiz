@@ -1,0 +1,143 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* QuizWhiz Design System */
+
+@layer base {
+  :root {
+    --background: 248 248 252;
+    --foreground: 29 31 43;
+
+    --card: 255 255 255;
+    --card-foreground: 29 31 43;
+
+    --popover: 255 255 255;
+    --popover-foreground: 29 31 43;
+
+    --primary: 115 95 255;
+    --primary-foreground: 255 255 255;
+
+    --secondary: 240 245 251;
+    --secondary-foreground: 29 31 43;
+
+    --muted: 245 245 249;
+    --muted-foreground: 115 115 140;
+
+    --accent: 240 245 251;
+    --accent-foreground: 29 31 43;
+
+    --destructive: 239 68 68;
+    --destructive-foreground: 255 255 255;
+
+    --border: 226 232 240;
+    --input: 0 0 0;
+    --ring: 115 95 255;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 255 255 255;
+    --sidebar-foreground: 29 31 43;
+    --sidebar-primary: 115 95 255;
+    --sidebar-primary-foreground: 255 255 255;
+    --sidebar-accent: 240 245 251;
+    --sidebar-accent-foreground: 29 31 43;
+    --sidebar-border: 226 232 240;
+    --sidebar-ring: 115 95 255;
+  }
+
+  .dark {
+    --background: 29 31 43;
+    --foreground: 248 248 252;
+
+    --card: 39 41 53;
+    --card-foreground: 248 248 252;
+
+    --popover: 39 41 53;
+    --popover-foreground: 248 248 252;
+
+    --primary: 115 95 255;
+    --primary-foreground: 255 255 255;
+
+    --secondary: 49 51 63;
+    --secondary-foreground: 248 248 252;
+
+    --muted: 49 51 63;
+    --muted-foreground: 156 163 175;
+
+    --accent: 49 51 63;
+    --accent-foreground: 248 248 252;
+
+    --destructive: 239 68 68;
+    --destructive-foreground: 255 255 255;
+
+    --border: 49 51 63;
+    --input: 0 0 0;
+    --ring: 115 95 255;
+
+    --sidebar-background: 39 41 53;
+    --sidebar-foreground: 248 248 252;
+    --sidebar-primary: 115 95 255;
+    --sidebar-primary-foreground: 255 255 255;
+    --sidebar-accent: 49 51 63;
+    --sidebar-accent-foreground: 248 248 252;
+    --sidebar-border: 49 51 63;
+    --sidebar-ring: 115 95 255;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-quiz-bg text-quiz-text font-inter;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins;
+  }
+}
+
+@layer components {
+  .quiz-gradient {
+    background: linear-gradient(135deg, #735FFF 0%, #00C6AE 100%);
+  }
+
+  .quiz-gradient-soft {
+    background: linear-gradient(135deg, rgba(115, 95, 255, 0.1) 0%, rgba(0, 198, 174, 0.1) 100%);
+  }
+
+  .quiz-card {
+    @apply bg-white rounded-2xl shadow-lg border border-gray-100;
+  }
+
+  .quiz-button {
+    @apply bg-quiz-purple hover:bg-quiz-purple/90 text-white font-medium px-6 py-3 rounded-xl transition-all duration-200 transform hover:scale-105;
+  }
+
+  .quiz-button-secondary {
+    @apply bg-quiz-teal hover:bg-quiz-teal/90 text-white font-medium px-6 py-3 rounded-xl transition-all duration-200 transform hover:scale-105;
+  }
+
+  .quiz-input {
+    @apply w-full px-4 py-3 border-2 border-black rounded-xl focus:border-quiz-purple focus:ring-2 focus:ring-quiz-purple/20 transition-all duration-200;
+  }
+}
+
+/* Remove or update yellow shades from custom styles: search for any yellow and yellow-100 to 500: */
+
+.bg-yellow-400, .bg-yellow-300, .bg-yellow-200, .bg-yellow-100, .border-yellow-400, .border-yellow-200, .text-yellow-400, .text-yellow-500 {
+  background-color: #ffcc89 !important;
+  border-color: #ffcc89 !important;
+  color: #b0781f !important; /* readable dark on light peach */
+}
+
+/* For custom classes, in case yellow is used directly in old styles: */
+.bg-quiz-yellow, .border-quiz-yellow, .text-quiz-yellow {
+  background-color: #ffcc89 !important;
+  border-color: #ffcc89 !important;
+  color: #b0781f !important;
+}

@@ -1,0 +1,7 @@
+project_id = "vbbghlxtzohqjxxkqrfq"
+
+[functions.generate-quiz]
+verify_jwt = false
+
+[functions.youtube-quiz]
+verify_jwt = false
